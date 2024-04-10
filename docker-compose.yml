@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mysql-development:
+    image: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: estoque
+    cap_add:
+      - SYS_NICE
+    ports:
+      - '3306:3306'
